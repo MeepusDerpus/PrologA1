@@ -14,9 +14,9 @@ father(peter,tom).
 parent(X):-
   mother(X,_Child);
   father(X,_Child).		
-parentOf(X,Y):-
-  mother(X,Y);
-  father(X,Y).	
+parentOf(Parent,Child):-
+  mother(Parent,Child);
+  father(Parent,Child).	
 sister(X,Y) :-
   female(X),
   parentOf(Z,Y),
